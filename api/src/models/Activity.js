@@ -1,7 +1,7 @@
 const { DataTypes } = require('sequelize');
 
 module.exports = (sequelize) => {
-    sequelize.define('activity', {
+    sequelize.define('Activity', {
         id: {
             primaryKey: true,
             allowNull: false,
