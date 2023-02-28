@@ -13,8 +13,8 @@ const getCountries = async (req, res) => {
 
 const getById = async (req, res) => {
     try {
-        const countryId = req.params.idCountry;
-        const country = idCountry ? await countryById(countryId) : await allCountries();
+        const idCountry = req.params.idCountry;
+        const country = idCountry ? await countryById(idCountry) : await allCountries();
         res.status(200).json(country)
     } catch (error){
         res.status(400).json({error: error.message})

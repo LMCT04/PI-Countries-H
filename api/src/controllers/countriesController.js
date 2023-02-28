@@ -1,7 +1,7 @@
 const { Op } = require('sequelize');
 const { Country, Activity } = require('../db');
 
-const allCountries = async (name) => {
+const allCountries = async () => {
     return await Country.findAll();
 }
 
@@ -24,7 +24,7 @@ const countryById = async (idCountry) => {
         include: [
             {
                 model: Activity,
-                attributes: ['name', 'difficulty', 'duration', 'season'],
+                attributes: ['id'],
                 through: { attributes:[]}
             }
         ]

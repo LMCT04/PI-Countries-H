@@ -20,11 +20,12 @@
 const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
 
-const {loadAllCountries} = require('./src/controllers/apiController')
+const {loadingCountries} = require('./DB_API')
 
 // Syncing all the models at once.
-conn.sync({ force: false }).then(async() => {
-  await loadAllCountries();
+conn.sync({ force: true }).then(async() => {
+  console.log(await loadingCountries())
+  await loadingCountries()
   server.listen(3001, () => {
     console.log('%s listening at 3001'); // eslint-disable-line no-console
   });
