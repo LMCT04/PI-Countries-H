@@ -24,7 +24,6 @@ const {loadingCountries} = require('./DB_API')
 
 // Syncing all the models at once.
 conn.sync({ force: true }).then(async() => {
-  console.log(await loadingCountries())
   await loadingCountries()
   server.listen(3001, () => {
     console.log('%s listening at 3001'); // eslint-disable-line no-console

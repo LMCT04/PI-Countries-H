@@ -1,6 +1,6 @@
 const {Router} = require("express")
-const countryRouter = Router();
 const { getCountries, getById } = require('../handlers/countriesHandler.js')
+const countryRouter = Router();
 
 
 
