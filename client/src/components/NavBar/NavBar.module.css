@@ -1,7 +1,33 @@
-.mainContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    border-radius: 15px;
-    border: 1px solid black;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+.nav{
+    background-color: #001427;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.contenedor {
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.link{
+    color:white;
+    text-decoration: none;
+    margin: 15px;
+    margin-bottom: 15px;
+    justify-content: right;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+    font-family: 'Roboto Mono', monospace;  
+}
+
+.link2{
+    color:white;
+    text-decoration: none;
+    margin-left: 15px;
+    border: solid 1px grey;
+    padding: 15px;
+    font-family: 'Roboto Mono', monospace;
 }

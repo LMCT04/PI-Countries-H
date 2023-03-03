@@ -1,29 +1,28 @@
-const { Activity, Country } = require('../db');
-const {Op} = require('sequelize');
+const { Activity, Country } = require("../db");
 
-const createdActivity = async ( name, difficulty, duration, season) => {
-    const activity = await Activity.create({
-        name,
-        difficulty,
-        duration,
-        season
-    })
+const createActivity = async (idCountry, name, difficulty, duration, season) => {
+const activityCreated = await Activity.create({
+    idCountry,
+    name,
+    difficulty,
+    duration,
+    season,
+});
 
-    countries.forEach(async (id) => {
-        const country = await Country.findOne({
-            where: {id: {[Op.iLike]: `%${id}%`}}
-        })
-        await country?.addActivity(activity)
-    })
+const searchCountry = await Country.findAll({
+    where: { 
+        id: idCountry },
+});
 
-    return res.send(activity)
-}
+await activityCreated.addCountry(searchCountry);
+return activityCreated;
+};
 
-const allActivities = async () => {
-    return await Activity.findAll();
-}
+const allAct = async () => {
+return await Activity.findAll();
+};
 
 module.exports = {
-    createdActivity,
-    allActivities
-}
+createActivity,
+allAct,
+};

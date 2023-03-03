@@ -1,0 +1,22 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .pagination li {
+    margin: 0 3px;
+  }
+
+  .pagination button {
+    border: solid rgb(167, 164, 164) 1px ;
+    background-color: rgb(168, 192, 221);
+    border-radius: 5px;
+    padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 3px;
+   padding-right: 3px;
+   color:rgb(255, 255, 255);
+  }
